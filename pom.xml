@@ -1,9 +1,39 @@
+<!--
+
+    This file is part of customHub created by thedark1337 version 0.3.5.
+
+    customHub is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    customHub is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with customHub.  If not, see <http://www.gnu.org/licenses/>.
+
+-->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>customHub</groupId>
     <artifactId>customHub</artifactId>
     <version>0.3.5</version>
     <name>customHub</name>
+    <developers>
+        <developer>
+            <id>thedark1337</id>
+            <name>thedark1337</name>
+            <email>1337alexpham@gmail.com</email>
+            <url>http://thedark1337.com</url>
+            <roles>
+                <role>developer</role>
+            </roles>
+            <timezone>-5</timezone>
+        </developer>
+    </developers>
     <licenses>
         <license>
             <name>agpv3</name>
@@ -18,6 +48,30 @@
     <build>
         <sourceDirectory>src</sourceDirectory>
         <plugins>
+            <plugin>
+                <groupId>com.mycila</groupId>
+                <artifactId>license-maven-plugin</artifactId>
+                <version>2.3</version>
+                <configuration>
+                    <header>AGPL-3.txt</header>
+                    <properties>
+                        <owner>thedark1337</owner>
+                        <email>1337alexpham@gmail.com</email>
+                    </properties>
+                    <excludes>
+                        <exclude>**/README</exclude>
+                        <exclude>src/test/resources/**</exclude>
+                        <exclude>src/main/resources/**</exclude>
+                    </excludes>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.1</version>
@@ -39,10 +93,10 @@
                 </includes>
             </resource>
             <resource>
-              <directory>${basedir}/lib</directory>
-              <includes>
-                <include>**/*.jar</include>
-              </includes>
+                <directory>${basedir}/lib</directory>
+                <includes>
+                    <include>**/*.jar</include>
+                </includes>
             </resource>
             <!-- Exclude JUnit test directory -->
             <resource>
