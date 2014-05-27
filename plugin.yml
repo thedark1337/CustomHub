@@ -1,0 +1,39 @@
+name: customHub
+version: ${project.version}
+description: Custom plugin to set hub and teleport to it.
+
+main: tdk.thedark1337.customhub.CustomHub
+
+author: thedark1337
+
+softdepend: [Multiverse-Core]
+
+commands:
+   hub:
+      description: Teleport to server hub
+      permission: customhub.hub
+   sethub:
+      description: Set server hub
+      permission: customhub.sethub
+ 
+permissions:
+     customhub.*: 
+        description: Alias to enable all customHub Permissions
+        children:
+          customhub.sethub: true
+          customhub.hub: true
+          customhub.help: true
+          customhub.bypassdelay: true
+     customhub.hub:
+          description: Allow access to the /hub command.
+          default: true
+     customhub.help:
+          description: Allow access to the /hub help command.
+          default: true
+     customhub.sethub:
+          description: Allow access to the /sethub command.
+          defualt: op
+     customhub.bypassdelay:
+          description: Allow bypassing of delay.
+          default: false
+     

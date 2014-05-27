@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+    <pomVersion>3</pomVersion>
+    <artifactId>customhub</artifactId>
+    <name>customHub</name>
+    <groupId>customhub</groupId>
+    <currentVersion>1.0</currentVersion>
+    <inceptionYear>2014</inceptionYear>
+    <logo>/images/logo.gif</logo>
+    <build>
+        <sourceDirectory>src/java</sourceDirectory>
+        <unitTestSourceDirectory>src/test</unitTestSourceDirectory>
+        <unitTest>
+            <includes>
+                <include>**/*Test.java</include>
+            </includes>
+        </unitTest>
+    </build>
+</project>
+
