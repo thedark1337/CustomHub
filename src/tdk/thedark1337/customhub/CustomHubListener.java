@@ -1,5 +1,5 @@
 /**
- * This file is part of customHub created by thedark1337 version 0.3.5.
+ * This file is part of customHub created by thedark1337 version 0.3.6.
  *
  * customHub is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published by

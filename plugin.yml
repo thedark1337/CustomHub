@@ -6,8 +6,6 @@ main: tdk.thedark1337.customhub.CustomHub
 
 author: thedark1337
 
-softdepend: [Multiverse-Core]
-
 commands:
    hub:
       description: Teleport to server hub
